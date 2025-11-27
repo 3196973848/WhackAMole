@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="#FFFFFF">
 
-    <!-- 使用真实的游戏横幅图片 -->
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -14,14 +14,14 @@
         android:scaleType="centerInside"
         android:src="@drawable/img_wackamole_banner" />
 
-    <!-- 按钮容器 -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
         android:layout_margin="20dp">
 
-        <!-- 开始游戏按钮 -->
+
         <Button
             android:id="@+id/btn_play"
             android:layout_width="match_parent"
@@ -31,7 +31,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/btn_leaderboard" />
 
-        <!-- 排行榜按钮 -->
+
         <Button
             android:id="@+id/btn_leaderboard"
             android:layout_width="match_parent"

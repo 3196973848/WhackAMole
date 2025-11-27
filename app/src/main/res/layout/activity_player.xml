@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- 游戏标题图片 -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="centerInside"
+        android:src="@drawable/img_wakamole_text"
+        android:contentDescription="Game title" />
+
+    <!-- 玩家分数显示 -->
+    <TextView
+        android:id="@+id/tv_playerscore"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#6750A4"
+        android:text="Score: 0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+    <!-- 输入区域容器 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="20dp">
+
+        <!-- 姓名输入框 -->
+        <EditText
+            android:id="@+id/et_playername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 头像颜色标题 -->
+        <TextView
+            android:id="@+id/tv_avatar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Avatar Colour"
+            android:textColor="#6750A4"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            app:layout_constraintTop_toBottomOf="@+id/et_playername"
+            android:layout_marginTop="40dp" />
+
+        <!-- 颜色选择单选按钮组 -->
+        <RadioGroup
+            android:id="@+id/rg_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_avatar_title"
+            android:layout_marginTop="20dp">
+
+            <RadioButton
+                android:id="@+id/rb_grey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Grey"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <RadioButton
+                android:id="@+id/rb_blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Blue"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <RadioButton
+                android:id="@+id/rb_orange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Orange"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <RadioButton
+                android:id="@+id/rb_green"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Green"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <RadioButton
+                android:id="@+id/rb_purple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Purple"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <RadioButton
+                android:id="@+id/rb_pink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pink"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        </RadioGroup>
+
+        <!-- 提交按钮 -->
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
