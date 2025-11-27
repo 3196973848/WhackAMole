@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 游戏标题图片 -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:scaleType="centerInside"
+        android:src="@drawable/img_wakamole_text"
+        android:paddingTop="20dp"
+        android:contentDescription="Game title" />
+
+    <!-- 时间和分数显示区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_time_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Time: 30"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <TextView
+            android:id="@+id/tv_score_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Score: 0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    </LinearLayout>
+
+    <!-- 第一行地鼠洞 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_mole_01"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="20dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_without_mole"
+            android:contentDescription="Mole hole 1" />
+
+        <ImageView
+            android:id="@+id/iv_mole_02"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="20dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_without_mole"
+            android:contentDescription="Mole hole 2" />
+
+        <ImageView
+            android:id="@+id/iv_mole_03"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="20dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_without_mole"
+            android:contentDescription="Mole hole 3" />
+
+    </LinearLayout>
+
+    <!-- 第二行地鼠洞 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_mole_04"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="20dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_without_mole"
+            android:contentDescription="Mole hole 4" />
+
+        <ImageView
+            android:id="@+id/iv_mole_05"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="20dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_without_mole"
+            android:contentDescription="Mole hole 5" />
+
+        <ImageView
+            android:id="@+id/iv_mole_06"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="20dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_without_mole"
+            android:contentDescription="Mole hole 6" />
+
+    </LinearLayout>
+
+    <!-- 第三行地鼠洞 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_mole_07"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="20dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_without_mole"
+            android:contentDescription="Mole hole 7" />
+
+        <ImageView
+            android:id="@+id/iv_mole_08"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="20dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_without_mole"
+            android:contentDescription="Mole hole 8" />
+
+        <ImageView
+            android:id="@+id/iv_mole_09"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="20dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_without_mole"
+            android:contentDescription="Mole hole 9" />
+
+    </LinearLayout>
+
+</LinearLayout>
