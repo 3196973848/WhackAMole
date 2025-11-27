@@ -48,8 +48,13 @@ public class PlayerActivity extends AppCompatActivity {
     }
 
     private void getScoreFromIntent() {
-        // 暂时使用模拟分数，稍后从GameActivity获取真实分数
-        finalScore = 5; // 模拟分数
+        // 从GameActivity获取真实分数
+        Intent intent = getIntent();
+        if (intent != null && intent.hasExtra("FINAL_SCORE")) {
+            finalScore = intent.getIntExtra("FINAL_SCORE", 0);
+        } else {
+            finalScore = 0; // 默认值
+        }
         tvPlayerScore.setText("Score: " + finalScore);
     }
 
@@ -67,8 +72,13 @@ public class PlayerActivity extends AppCompatActivity {
         int selectedAvatarId = rgAvatar.getCheckedRadioButtonId();
         String avatarColor = getAvatarColor(selectedAvatarId);
 
-        // 打印信息（稍后保存到数据库）
-        System.out.println("Player: " + playerName +
+        // 创建玩家对象并保存到排行榜
+        Player newPlayer = new Player(playerName, avatarColor, finalScore);
+        Leaderboard leaderboard = Leaderboard.getInstance();
+        leaderboard.updateLeaderboard(newPlayer);
+
+        // 打印信息
+        System.out.println("Player saved: " + playerName +
                 ", Score: " + finalScore +
                 ", Avatar: " + avatarColor);
 
