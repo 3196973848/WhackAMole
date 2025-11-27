@@ -9,6 +9,7 @@ public class Leaderboard {
     private ArrayList<Player> leaderboard;
     private final int MAX_LEADERBOARD_SIZE = 5;
 
+    // 私有构造函数（单例模式）
     private Leaderboard() {
         leaderboard = new ArrayList<>();
         // 添加测试数据
@@ -19,6 +20,7 @@ public class Leaderboard {
         leaderboard.add(new Player("Mahroor", "Grey", 1));
     }
 
+    // 获取单例实例
     public static Leaderboard getInstance() {
         if (leaderboardInstance == null) {
             leaderboardInstance = new Leaderboard();
@@ -26,23 +28,23 @@ public class Leaderboard {
         return leaderboardInstance;
     }
 
+    // 更新排行榜
     public void updateLeaderboard(Player newPlayer) {
         leaderboard.add(newPlayer);
 
-        // 使用简单的排序方法
-        Collections.sort(leaderboard, new Comparator<Player>() {
-            @Override
-            public int compare(Player p1, Player p2) {
-                // 按分数从高到低排序
-                if (p1.getPlayerScore() > p2.getPlayerScore()) {
-                    return -1;
-                } else if (p1.getPlayerScore() < p2.getPlayerScore()) {
-                    return 1;
-                } else {
-                    return 0;
+        // 简单的冒泡排序（从高到低）
+        for (int i = 0; i < leaderboard.size() - 1; i++) {
+            for (int j = 0; j < leaderboard.size() - i - 1; j++) {
+                Player p1 = leaderboard.get(j);
+                Player p2 = leaderboard.get(j + 1);
+
+                if (p1.getPlayerScore() < p2.getPlayerScore()) {
+                    // 交换位置
+                    leaderboard.set(j, p2);
+                    leaderboard.set(j + 1, p1);
                 }
             }
-        });
+        }
 
         // 如果超过最大大小，移除最低分
         if (leaderboard.size() > MAX_LEADERBOARD_SIZE) {
@@ -54,7 +56,8 @@ public class Leaderboard {
         }
     }
 
+    // 获取排行榜
     public ArrayList<Player> getLeaderboard() {
-        return new ArrayList<>(leaderboard);
+        return new ArrayList<>(leaderboard); // 返回副本
     }
 }
